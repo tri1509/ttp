@@ -41,6 +41,41 @@
             }
         }
 
+        public function insert_customer_order($data) {
+            $name = mysqli_real_escape_string($this->db->link, $data['name']);
+            $address = mysqli_real_escape_string($this->db->link, $data['address']);
+            $email = mysqli_real_escape_string($this->db->link, $data['email']);
+            $password = mysqli_real_escape_string($this->db->link, $data['password']);
+            $zipcode = mysqli_real_escape_string($this->db->link, $data['zipcode']);
+            if($name == "" || $zipcode == "" || $address == "" || $email == "" || $password == "" ) {
+                $alert = "<span class='notok'>Bạn vui lòng điền đầy đủ thông tin !</span>";
+                return $alert;
+            }else{
+                $check_email = "SELECT * FROM tbl_customer WHERE email='$email' LIMIT 1";
+                $result_check = $this->db->select($check_email);
+                if($result_check){
+                    $alert = "<span class='notok'>Email này đã đăng ký rồi, mời bạn dùng email khác</span>";
+                    return $alert;
+                }else{
+                    $query = "INSERT INTO tbl_customer(name,email,address,zipcode,password)values('$name','$email','$address','$zipcode','$password')";
+                    $result = $this->db->insert($query);
+                    if($result){
+                        $query_check = "SELECT * FROM tbl_customer WHERE email='$email' AND zipcode = '$zipcode' LIMIT 1";
+                        $result_check = $this->db->select($query_check);
+                        if($result_check){
+                        $value = $result_check -> fetch_assoc();
+                        Session::set('customer_login',true);
+                        Session::set('customer_id',$value['id']);
+                        Session::set('customer_name',$value['name']);
+                        }else{
+                            $alert = "<span class='notok'>Thất bại !</span>";
+                            return $alert;
+                        }
+                    }
+                }
+            }
+        }
+
         public function login_customer($data){
             $email = mysqli_real_escape_string($this->db->link, $data['email']);
             $password = mysqli_real_escape_string($this->db->link, $data['password']);
@@ -55,7 +90,7 @@
                     Session::set('customer_login',true);
                     Session::set('customer_id',$value['id']);
                     Session::set('customer_name',$value['name']);
-                    header('location:order.php');
+                    header('location:giohang.html');
                 }else{
                     $alert = "<span class='notok'>Email và password không đúng !</span>";
                     return $alert;

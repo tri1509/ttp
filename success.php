@@ -1,11 +1,13 @@
-<?php include 'inc/header.php' ;?>
-<?php include 'inc/sale.php' ;?>
-<?php
+<?php 
+	$title = "Đặt hàng";
+    include 'inc/header.php' ;
+    include 'inc/sale.php';
+
     if(isset($_GET['orderid']) && $_GET['orderid']=='order'){
 		$customer_id = Session::get('customer_id');
         $insertOrder = $ct -> insertOrder($customer_id);
 		$delCart = $ct -> del_all_data_cart();
-		header('Location:success.php');
+		header('Location:success.html');
     }
 ?>
 
@@ -15,7 +17,7 @@
     if($get_amount) {
         $amount = 0;
         while($result = $get_amount -> fetch_assoc()) {
-        $price =  $result['price'];
+        $price =  $result['price'] * $result['quantity'];
         $amount += $price;
         $date = $result ['date_order'];
         }

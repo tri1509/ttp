@@ -103,23 +103,23 @@ CREATE TABLE `tbl_brand_lv2` (
 
 INSERT INTO `tbl_brand_lv2` (`id`, `brand_id`, `brand_id_lv2`, `brand_name_lv2`) VALUES
 (1, 1, 11, 'đường phèn'),
-(2, 1, 12, 'nhân sâm\r\n'),
+(2, 1, 12, 'nhân sâm'),
 (3, 1, 13, 'KIDS'),
 (4, 1, 14, 'đông trùng'),
 (5, 1, 15, 'saffron'),
 (6, 2, 21, 'saffron'),
 (7, 2, 22, 'đông trùng'),
-(8, 2, 23, 'nhân sâm\r\n'),
+(8, 2, 23, 'nhân sâm'),
 (9, 2, 24, 'đường phèn'),
-(10, 2, 25, 'không đường\r\n'),
-(11, 2, 26, 'hạt chia\r\n'),
+(10, 2, 25, 'không đường'),
+(11, 2, 26, 'hạt chia'),
 (12, 3, 31, 'đông trùng'),
-(13, 3, 32, 'nhân sâm\r\n'),
+(13, 3, 32, 'nhân sâm'),
 (14, 3, 33, 'đường phèn'),
 (15, 3, 34, 'saffron'),
-(16, 3, 35, 'hạt chia\r\n'),
-(17, 3, 37, 'táo đỏ\n'),
-(18, 3, 36, 'không đường\r\n'),
+(16, 3, 35, 'hạt chia'),
+(17, 3, 37, 'táo đỏ'),
+(18, 3, 36, 'không đường'),
 (19, 2, 27, 'táo đỏ');
 
 -- --------------------------------------------------------

@@ -4,24 +4,19 @@ include 'inc/header.php' ;?>
 <?php include 'inc/sale.php' ;?>
 
 <?php
+	if(!isset($_GET['id'])) {
+		echo "<meta http-equiv='refresh' content='0;URL=giohang.html?id=live'>";
+	}
 	if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['capnhat'])) {
 		$cartId = $_POST['cartId'];
 		$quantity = $_POST['quantity'];
 		$update_quantity_cart = $ct -> update_quantity_cart($quantity,$cartId);
 		echo "<meta http-equiv='refresh' content='0;URL=giohang.html?id=live'>";
-
 	}
 	if(isset($_GET['cartid']) && $_GET['cartid']!=NULL){
         $cartDel = $_GET['cartid'];
 		$cartDel = $ct->del_cart($cartDel);
     }
-?>
-
-
-<?php
-	if(!isset($_GET['id'])) {
-		echo "<meta http-equiv='refresh' content='0;URL=giohang.html?id=live'>";
-	}
 ?>
 
 <section>
@@ -36,7 +31,7 @@ include 'inc/header.php' ;?>
 		<div class="clear20"></div>
 		<div class="container">
 			<div class="bang-giohang">
-				<h3 class="nomargin bold clred">Giỏ hàng</h3>
+				<h3 class="nomargin bold clred text-center">Giỏ hàng của bạn</h3>
 				<?php 
 					if(isset($update_quantity_cart)){ 
 						echo $update_quantity_cart ; 
@@ -135,7 +130,7 @@ include 'inc/header.php' ;?>
 				</div>
 				<?php if($check_cart){ ?>
 					<div class="shopright">
-						<a href="login.html"><button type="button" class="check-out-btn">Thanh toán</button></a>
+						<a href="order.html"><button type="button" class="check-out-btn">Thanh toán</button></a>
 					</div>
 				<?php } ?>
 			</div>

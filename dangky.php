@@ -65,7 +65,7 @@
                                         <i class="i_color"># Bạn ghi rõ thành phố, quận/ huyện để shop tiện giao hàng nhé !!! Tránh trường hợp giao hàng sai địa chỉ !!!</i>
                               </div>
                               <div class="form-label-group position-relative">
-                                <input name="restorepass" type="password" id="inputPassword" class="form-control toggle-pass-focus" placeholder="Password" required>
+                                <input name="password" type="password" id="inputPassword" class="form-control toggle-pass-focus" placeholder="Password" required>
                                 <div class="toggle-pass" onclick="togglePass()">
                                       <i class="eye eye-open fa-solid fa-eye" id="open"></i>
                                       <i class="eye eye-close fa-solid fa-eye-slash" id="close"></i>
@@ -83,7 +83,7 @@
                                 <span id="thongbao"></span>
                               </div> 
                               <input disabled name="submit" id="dangky" class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" value="Đăng Ký" style="	border-radius: 10px;">
-                              <a class="d-block text-center mt-2 small" href="login.php" style="font-size:20px">Đăng Nhập</a>
+                              <a class="d-block text-center mt-2 small" href="login.html" style="font-size:20px">Đăng Nhập</a>
                               <hr class="my-4">
                           </form> 
                         </div>

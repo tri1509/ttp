@@ -17,10 +17,6 @@
 		$price = $_GET['price'];
 		$huydon = $ct -> huydon($id,$time,$price);
 	}
-
-    if(!$check_order) {
-        // header('Location:sanpham.php');
-    }
 ?>
 <section>
     <div class="main-breac">
@@ -97,14 +93,13 @@
                             <a  href="donhang.html?huydon=<?php echo $customer_id?>&price=<?php echo $result['price']?>&time=<?php echo $result['date_order']?>" onclick="return confirm('Bạn có muốn huỷ đơn hàng này không?')" class="clred">Huỷ đơn</a></td>
                         <?php } ?>
 					</tr>
-
 					<?php }} ?>
 				</table>
 			</form>
                 <div class="clear40"></div>
                 <div class="shopping">
                     <div class="shopleft">
-                        <a href="sanpham.php"><button class="custom-btn btn-7"><span>Quay lại cửa hàng</span></button></a>
+                        <a href="sanpham.html"><button class="custom-btn btn-7"><span>Quay lại cửa hàng</span></button></a>
                     </div>
                 </div>
                 <div class="clear40"></div>

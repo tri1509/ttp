@@ -6,7 +6,7 @@
 <?php 
 	$login_check = Session::get('customer_login');
 	if($login_check) {
-		header('Location:order.html');
+		header('Location:giohang.html');
 	}
 ?>
 

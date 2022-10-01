@@ -46,7 +46,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="./css/lightslider.css" /> 
-	<link rel="stylesheet" href="./css/nivo-slider.css">   
+	<link rel="stylesheet" href="./css/nivo-slider.css">
+   <link rel="stylesheet" href="./css/cart.css">
 	<link rel="stylesheet" href="./css/style.css" />
 	<title><?php echo $title ;?></title>
 </head>
