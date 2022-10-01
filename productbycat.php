@@ -13,7 +13,9 @@
 	if($namebycat) {
 		while($get_title = $namebycat -> fetch_assoc()){
 		$title = $get_title['category_name'];
-	}}
+	}}else{
+		$title = "Sản phẩm đang cập nhật";
+	}
 	
 	include 'inc/header.php';
 	include 'inc/sale.php';
@@ -125,7 +127,9 @@
 							</div>
 							</a>
 						</div>
-					<?php } }?>
+					<?php } }else{ ?>
+						<h4 class="nomargin text-uppercase clredt text-center">sản phẩm đang cập nhật</h4>
+					<?php } ?>
 				</div>
 				<div class="clear20"></div>
 				</div>

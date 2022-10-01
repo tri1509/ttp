@@ -21,7 +21,7 @@
     </li>
 
     <?php
-        for($i=1 ; $i<= $product_button ; $i++) {
+        for($i=1 ; $i <= ceil($product_button) ; $i++) {
     ?>
 
     <li class="pagination-item pagination-item__link-<?php if ($i == $trang) { echo "acctive"; } ?> ">

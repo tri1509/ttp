@@ -1,9 +1,10 @@
 <?php
-	include 'inc/header.php';
-	include 'inc/sale.php';
-	// include 'inc/slider.php';
-?>
-<?php
+	include_once 'lib/database.php';
+	include_once 'helpers/format.php';
+	spl_autoload_register(function($class){
+		include_once "classes/".$class.".php";
+	});
+	
 	if(isset($_GET['brandid']) && 
 		isset($_GET['brandidlv2']) && 
 		$_GET['brandid']!=NULL && 
@@ -11,6 +12,16 @@
 			$id = $_GET['brandid'];
 			$idlv2 = $_GET['brandidlv2'];
 	}
+
+	$brand = new brand();
+	$namebybrand = $brand -> get_name_by_brand($id);
+	if($namebybrand) {
+		while($get_title = $namebybrand -> fetch_assoc()){
+		$title = $get_title['brand_name'];
+	}}
+
+	include 'inc/header.php';
+	include 'inc/sale.php';
 ?>
 <section>
 <div class="main-breac">
@@ -90,13 +101,14 @@
 			
 			<div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12 order-lg-2 order-md-1 order-1">
 				<?php
+					$namebybrand = $brand -> get_name_by_brand($id);
 					$namebybrandlv2 = $brand -> get_name_by_brand_lv2($id,$idlv2);
-					if($namebybrandlv2) {
-					$result_name = $namebybrandlv2 -> fetch_assoc();
+					$result_name = $namebybrand -> fetch_assoc();
+					$result_name_lv2 = $namebybrandlv2 -> fetch_assoc();
 				?>
 				<h4 class="nomargin text-uppercase clredt">Thương hiệu
-					: <?php echo $result_name['brand_name_lv2'] ?>
-				</h4><br><?php } ?>
+					: <?php echo $result_name['brand_name'] ." loại ". $result_name_lv2['brand_name_lv2'] ?>
+				</h4><br>
 				<div class="clear20"></div>
 				<div class="row flex-wrap list-spc">
 					<?php
@@ -121,7 +133,9 @@
 							</div>
 							</a>
 						</div>
-					<?php } } ?>
+					<?php } }else{ ?>
+						<h4 class="nomargin text-uppercase clredt text-center">sản phẩm đang cập nhật</h4>
+					<?php } ?>
 				</div>
 				<div class="clear20"></div>
 				</div>

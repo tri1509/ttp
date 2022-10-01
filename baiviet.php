@@ -1,9 +1,26 @@
-<?php include 'inc/header.php';include 'inc/sale.php';?>
 <?php
+    include_once 'lib/database.php';
+    include_once 'helpers/format.php';
+    spl_autoload_register(function($class){
+        include_once "classes/".$class.".php";
+    });
+    $ps = new post();
+
     if(isset($_GET['postid']) && $_GET['postid']!=NULL){
         $id = $_GET['postid'];
     }
+
+    $get_post = $ps -> get_post($id);
+
+    if($get_post){
+        while($get_title = $get_post -> fetch_assoc()){
+            $title = $get_title['baiviet_name'];
+    }}
+
+    include 'inc/header.php';
+    include 'inc/sale.php';
 ?>
+
 
 <div class="container">
     <div class="row">

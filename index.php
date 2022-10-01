@@ -10,12 +10,12 @@ include 'inc/header.php';
             <div class="main-banner">
                <div class="slider-wrapper">
                      <div id="mainSlider" class="nivoSlider">
-                        <a href="javascript:void(0);"><img src="img/bn01.png" alt="banner" class="fullwidth"/></a>
-                        <a href="javascript:void(0);"><img src="img/bn02.png" alt="banner" class="fullwidth"/></a>
-                        <a href="javascript:void(0);"><img src="img/bn03.png" alt="banner" class="fullwidth"/></a>
-                        <a href="javascript:void(0);"><img src="img/bn01.png" alt="banner" class="fullwidth"/></a>
-                        <a href="javascript:void(0);"><img src="img/bn02.png" alt="banner" class="fullwidth"/></a>
-                        <a href="javascript:void(0);"><img src="img/bn03.png" alt="banner" class="fullwidth"/></a>
+                        <a href="javascript:void(0);"><img src="img/bn01.webp" alt="banner" class="fullwidth"/></a>
+                        <a href="javascript:void(0);"><img src="img/bn02.webp" alt="banner" class="fullwidth"/></a>
+                        <a href="javascript:void(0);"><img src="img/bn03.webp" alt="banner" class="fullwidth"/></a>
+                        <a href="javascript:void(0);"><img src="img/bn01.webp" alt="banner" class="fullwidth"/></a>
+                        <a href="javascript:void(0);"><img src="img/bn02.webp" alt="banner" class="fullwidth"/></a>
+                        <a href="javascript:void(0);"><img src="img/bn03.webp" alt="banner" class="fullwidth"/></a>
                      </div>
                </div>
             </div>
@@ -123,29 +123,8 @@ include 'inc/header.php';
       </div>
       <div class="main-news-home">
       <div class="clear40"></div>
-      <div class="main-sanphamchinh"><div class="container"><h3 class="tit-pub">BÀI VIẾT MỚI</h3><p class="center">Thông tin cần biết - Tư vấn - Hướng dẫn sử dụng</p><div class="clear40"></div><div class="row"><div class="col-md-6"><div class="block-news-home"><div class="flex-nh"><a href="gioithieu.php" class="img-nh"><img src="img/100.jpg" class="fullwidth"></a><div class="ct-nh"><p class="tit-nh"><a href="gioithieu.php" class="clblack">[Đơn hàng] Người bán gửi hàng tại bưu cục là gì?</a></p><p class="des-nh">* <strong>Salanest</strong>  gửi hàng tại bưu cục là một trong những hình thức vận chuyển sản phẩm từ Người bán giao đến Đơn vị vận chuyển để gửi đến cho Người mua. Người bán có thể chọn hình thức này thay cho việc chờ Đơn vị vận chuyển đến lấy hàng</p><p class="des-nh">* Sau đó, đơn hàng sẽ được đơn vị vận chuyển giao đến địa chỉ của Người mua. Bạn không cần phải ra bưu cục để nhận hàng</p></div></div></div></div><div class="col-md-6"><div class="block-news-home"><div class="flex-nh"><a href="gioithieu.php" class="img-nh"><img src="img/thanhtoan.jpg" class="fullwidth"></a><div class="ct-nh"><p class="tit-nh"><a href="gioithieu.php" class="clblack">[Thành viên mới] Salanest hiện đang có những phương thức thanh toán nào?</a></p><p class="des-nh">* Hiện nay Salanest đang hỗ trợ 04 hình thức thanh toán, bao gồm:</p><p>* Chuyển khoản ngân hàng</p><p>* Thanh toán Vnpay</p><p>* Thẻ ATM nội địa (Internet Banking)</p><p>* Thanh toán khi nhận hàng (COD)</p></div></div></div></div></div></div><div class="clear40"></div></div>
+      <div class="main-sanphamchinh"><div class="container"><h3 class="tit-pub">BÀI VIẾT MỚI</h3><p class="center">Thông tin cần biết - Tư vấn - Hướng dẫn sử dụng</p><div class="clear40"></div><div class="row"><div class="col-md-6"><div class="block-news-home"><div class="flex-nh"><a href="gioithieu.php" class="img-nh"><img src="img/100.webp" class="fullwidth"></a><div class="ct-nh"><p class="tit-nh"><a href="gioithieu.php" class="clblack">[Đơn hàng] Người bán gửi hàng tại bưu cục là gì?</a></p><p class="des-nh">* <strong>Salanest</strong>  gửi hàng tại bưu cục là một trong những hình thức vận chuyển sản phẩm từ Người bán giao đến Đơn vị vận chuyển để gửi đến cho Người mua. Người bán có thể chọn hình thức này thay cho việc chờ Đơn vị vận chuyển đến lấy hàng</p><p class="des-nh">* Sau đó, đơn hàng sẽ được đơn vị vận chuyển giao đến địa chỉ của Người mua. Bạn không cần phải ra bưu cục để nhận hàng</p></div></div></div></div><div class="col-md-6"><div class="block-news-home"><div class="flex-nh"><a href="gioithieu.php" class="img-nh"><img src="img/thanhtoan.webp" class="fullwidth"></a><div class="ct-nh"><p class="tit-nh"><a href="gioithieu.php" class="clblack">[Thành viên mới] Salanest hiện đang có những phương thức thanh toán nào?</a></p><p class="des-nh">* Hiện nay Salanest đang hỗ trợ 04 hình thức thanh toán, bao gồm:</p><p>* Chuyển khoản ngân hàng</p><p>* Thanh toán Vnpay</p><p>* Thẻ ATM nội địa (Internet Banking)</p><p>* Thanh toán khi nhận hàng (COD)</p></div></div></div></div></div></div><div class="clear40"></div></div>
       <div class="clear40"></div>
-         <!--    <div class="main-hotline-tuvan" id="tuvan">
-      <div class="container">
-         <div class="flex-around">
-            <div class="hotline">
-               <img src="img/phone.png">
-               <div class="so-hotline">
-                  <p class="shl-top">HOTLINE 24/24</p>
-                  <p class="shl-bottom">0945 518 538</p>
-               </div>
-            </div>
-            <div class="tuvan">
-               <p class="tv-tit">YÊU CẦU TƯ VẤN VÀ GỌI LẠI</p>
-               <form class="form-tuvan">
-                  <input type="text" placeholder="Nhập tên Quý khách" class="ip-tuvan" name="">
-                  <input type="text" placeholder="Nhập số Điện thoại" class="ip-tuvan" name="">
-                  <button type="submit" class="gui">GỬI</button>
-               </form>
-            </div>
-         </div>
-      </div> 
-      </div>-->
    </div>
 </section>
 <?php  include 'inc/footer.php' ; ?>

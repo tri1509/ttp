@@ -89,7 +89,7 @@
                            if($show_brand_lv2){
                               while($result_lv2 = $show_brand_lv2->fetch_assoc()){
                         ?>
-                              <li class="li-sub-menu-lv2"><a class="link-sub-menu-lv2" href="productbybrandlv2.php?brandid=<?php echo $result_lv2['brand_id'] ?>&brandidlv2=<?php echo $result_lv2['brand_id_lv2'] ?>"><?php echo $result_lv2['brand_name_lv2']?></a></li>
+                              <li class="li-sub-menu-lv2"><a class="link-sub-menu-lv2" href="san-pham-theo-thuong-hieu/<?php echo $result_lv2['brand_id'] ?>/<?php echo $result_lv2['brand_id_lv2'] ?>.html"><?php echo $result_lv2['brand_name_lv2']?></a></li>
                         <?php }} ?>
                            </ul>
                         </li>
