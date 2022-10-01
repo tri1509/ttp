@@ -1,4 +1,7 @@
-<?php include 'inc/header.php' ;?>
+<?php
+$title = "Trang chủ";
+include 'inc/header.php';
+?>
 <section>
 <?php include 'inc/sale.php' ;?>
    <div class="container container_slider">
@@ -32,9 +35,10 @@
                   while ($result = $showProduct ->fetch_assoc()) {
             ?>
                <div class="col-xl-3 col-lg-3 col-md-4 col-sm-6 col-xs-6 col-6">
-                  <a href="chitietsp.php?proid=<?php echo $result['sanpham_id'] ?>" title="<?php echo $result['sanpham_name'] ?>">
-                     <div class="item-pro">
-                        <div class="home-product__item-img" style="background-image:url(./img/<?php echo $result['hinh'] ?>);"></div>
+                  <a href="chi-tiet/<?php echo $result['sanpham_id'] ?>.html" title="<?php echo $result['sanpham_name'] ?>">
+                     <div class="item-pro item-pro-pd ">
+                        <div class="home-product__item-img" 
+                        style="background-image:url(./img/<?php echo $result['hinh'] ?>);"></div>
                         <div class="ct-item-pro">
                            <p class="bold item-name"><?php echo $result['sanpham_name'] ?></p>
                            <div class="clear10"></div>
@@ -43,7 +47,7 @@
                               <p class="new-pri bold"><?php echo number_format($result['sanpham_giakhuyenmai'])." đ" ; ?></p>
                            </div>
                            <div class="clear10"></div>
-                           <a href="chitietsp.php?proid=<?php echo $result['sanpham_id'] ?>" class="addtocart">Xem sản phẩm </a>
+                           <a href="chi-tiet/<?php echo $result['sanpham_id'] ?>.html" class="addtocart">Xem sản phẩm </a>
                         </div>
                         <div class="home-product__item-new">
                            <span class="home-product__item-new-chill">

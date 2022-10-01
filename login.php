@@ -1,11 +1,12 @@
 <?php
+  $title = "Đăng nhập";
 	include 'inc/header.php';
 	include 'inc/sale.php';
 ?>
 <?php 
 	$login_check = Session::get('customer_login');
 	if($login_check) {
-		header('Location:order.php');
+		header('Location:order.html');
 	}
 ?>
 
@@ -65,8 +66,8 @@
                           <hr>
                           <input class="btn btn-lg btn-primary btn-block text-uppercase" type="submit" value="Đăng Nhập" name="login" style="	border-radius: 10px;">
                           <p>Bạn mới biết đến Tiến Thịnh Phát ?
-                            <a class="d-block text-center mt-2 small" href="dangky.php" style="font-size:20px">Đăng ký</a></p>
-                            <a class="d-block text-center mt-2 small" href="restore.php" style="font-size:15px">Bạn quên mật khẩu ?</a></p>
+                            <a class="d-block text-center mt-2 small" href="dangky.html" style="font-size:20px">Đăng ký</a></p>
+                            <a class="d-block text-center mt-2 small" href="restore.html" style="font-size:15px">Bạn quên mật khẩu ?</a></p>
                           <hr class="my-4">
                       </form>
                         </div>

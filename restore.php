@@ -1,4 +1,5 @@
 <?php
+  $title = "restore";
 	include 'inc/header.php';
 	include 'inc/sale.php';
 ?>

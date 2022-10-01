@@ -1,14 +1,17 @@
-<?php include 'inc/header.php' ;?>
-<?php include 'inc/sale.php' ;?>
+<?php
+	$title = "Thanh toán";
+	include 'inc/header.php';
+	include 'inc/sale.php' ;
+?>
 <div class="modal-thanhtoan">
     <section class="hinhthuc-thanhtoan">
         <h5 class="modal-title" id="exampleModalLabel">Chọn phương thức thanh toán :</h5>
         <div class="modal-body">
-            <a href="online.php"><button class="snip1547"><span>Thanh toán Online</span></button></a>
-            <a href="offline.php"><button class="snip1547"><span>Thanh toán khi nhận hàng</span></button></a>
+            <a href="online.html"><button class="snip1547"><span>Thanh toán Online</span></button></a>
+            <a href="offline.html"><button class="snip1547"><span>Thanh toán khi nhận hàng</span></button></a>
         </div>
         <div class="shopleft">
-            <a href="giohang.php">  <button class="custom-btn btn-7"><span>Quay lại giỏ hàng</span></button></a>
+            <a href="giohang.html">  <button class="custom-btn btn-7"><span>Quay lại giỏ hàng</span></button></a>
         </div>
     </section>
 </div>

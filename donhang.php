@@ -1,6 +1,8 @@
-<?php include 'inc/header.php' ;?>
-<?php include 'inc/sale.php' ;?>
-<?php
+<?php 
+    $title = "Đơn hàng";
+    include 'inc/header.php' ;
+    include 'inc/sale.php' ;
+
     $ct = new cart();
     if(isset($_GET['comfirmid'])){
 		$id = $_GET['comfirmid'];
@@ -83,7 +85,7 @@
                                 <div style="--delay: 4s"></div>
                             </div>
                             <hr>
-                            <a href="?comfirmid=<?php echo $customer_id?>&price=<?php echo $result['price']?>&time=<?php echo $result['date_order']?>">Tôi đã nhận được hàng</a>
+                            <a href="donhang.html?comfirmid=<?php echo $customer_id?>&price=<?php echo $result['price']?>&time=<?php echo $result['date_order']?>">Tôi đã nhận được hàng</a>
                         <?php }else{ echo "Cảm ơn Quý Khách"; } ?>
                         </td>
 						<td>
@@ -92,7 +94,7 @@
                         <?php }elseif($result['status'] == 3){ ?>
                             Đang chờ huỷ...
                         <?php }else { ?>
-                            <a  href="?huydon=<?php echo $customer_id?>&price=<?php echo $result['price']?>&time=<?php echo $result['date_order']?>" onclick="return confirm('Bạn có muốn huỷ đơn hàng này không?')" class="clred">Huỷ đơn</a></td>
+                            <a  href="donhang.html?huydon=<?php echo $customer_id?>&price=<?php echo $result['price']?>&time=<?php echo $result['date_order']?>" onclick="return confirm('Bạn có muốn huỷ đơn hàng này không?')" class="clred">Huỷ đơn</a></td>
                         <?php } ?>
 					</tr>
 
@@ -119,7 +121,7 @@
             <div class="clear40"></div>
             <div class="shopping">
                 <div class="shopleft">
-                    <a href="sanpham.php"><button class="custom-btn btn-7"><span>Quay lại cửa hàng</span></button></a>
+                    <a href="sanpham.html"><button class="custom-btn btn-7"><span>Quay lại cửa hàng</span></button></a>
                 </div>
             </div>
             <div class="clear40"></div>

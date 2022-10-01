@@ -1,7 +1,8 @@
-<?php include 'inc/header.php'; ?>
-<?php include 'inc/sale.php'; ?>
-
 <?php
+    $title = "Chỉnh sửa thông tin";
+    include 'inc/header.php'; 
+    include 'inc/sale.php';
+
     $login_check = Session::get('customer_login');
 	if($login_check ==false) {
 		header('Location:login.php');

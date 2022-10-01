@@ -1,12 +1,22 @@
 <?php
-	include 'inc/header.php';
-	include 'inc/sale.php';
-	// include 'inc/slider.php';
-?>
-<?php
+	include_once 'lib/database.php';
+	include_once 'helpers/format.php';
+	spl_autoload_register(function($class){
+		include_once "classes/".$class.".php";
+	});
+	
 	if(isset($_GET['brandid']) && $_GET['brandid']!=NULL){
 		$id = $_GET['brandid'];
 	}
+	$brand = new brand();
+	$namebybrand = $brand -> get_name_by_brand($id);
+	if($namebybrand) {
+		while($get_title = $namebybrand -> fetch_assoc()){
+		$title = $get_title['brand_name'];
+	}}
+
+	include 'inc/header.php';
+	include 'inc/sale.php';
 ?>
 <section>
 <div class="main-breac">
@@ -30,7 +40,7 @@
 						if($showCat){
 							while($result_showCat = $showCat -> fetch_assoc()){
 					?>
-						<a href="productbycat.php?catid=<?php echo $result_showCat['category_id'] ?>" class=""><img src="./img/diamond.png"><span><?php echo $result_showCat['category_name'] ?></span></a>
+						<a href="san-pham-theo-danh-muc/<?php echo $result_showCat['category_id'] ?>.html" class=""><img src="./img/diamond.png"><span><?php echo $result_showCat['category_name'] ?></span></a>
 					<?php }} ?>
 
 					</div>
@@ -43,7 +53,7 @@
 						if($show_brand){
 							while($result_showBrand = $show_brand->fetch_assoc()){
 					?>
-						<a href="productbybrand.php?brandid=<?php echo $result_showBrand['brand_id'] ?>" class="
+						<a href="san-pham-theo-thuong-hieu/<?php echo $result_showBrand['brand_id'] ?>.html" class="
 						<?php 
 							if($id == $result_showBrand['brand_id']){
 								echo "active";
@@ -78,7 +88,7 @@
 						while($result = $get_post -> fetch_assoc()){
 					?>
 						<div class="ct-aside">
-							<a href="baiviet.php?postid=<?php echo $result['baiviet_id'] ; ?>"><img src="./img/diamond.png"><span class="category-baiviet"><?php echo $result['baiviet_name'] ; ?></span></a>
+							<a href="bai-viet/<?php echo $result['baiviet_id'] ; ?>.html"><img src="./img/diamond.png"><span class="category-baiviet"><?php echo $result['baiviet_name'] ; ?></span></a>
 						</div>
 					<?php }} ?>
 					</div>
@@ -92,7 +102,6 @@
 				<h4 class="nomargin text-uppercase clredt">Thương hiệu
 					: <?php echo $result_name['brand_name'] ?>
 				</h4><br><?php } ?>
-				<p class="des-dmbv">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 				<div class="clear20"></div>
 				<div class="row flex-wrap list-spc">
 					<?php
@@ -101,7 +110,7 @@
 							while($result = $productbybrand -> fetch_assoc()) {
 					?>
 						<div class="col-xl-4 col-md-4 col-sm-6 col-xs-6 col-6">
-							<a href="chitietsp.php?proid=<?php echo $result['sanpham_id'] ?>" title="<?php echo $result['sanpham_name'] ?>">
+							<a href="chi-tiet/<?php echo $result['sanpham_id'] ?>.html" title="<?php echo $result['sanpham_name'] ?>">
 							<div class="item-pro">
 								<div class="home-product__item-img" style="background-image:url(./img/<?php echo $result['hinh']; ?>);"></div>
 								<div class="ct-item-pro">
@@ -125,7 +134,7 @@
 		</div>
 	</div>
 </section>
- <?php
+<?php
 	include 'inc/footer.php';
 ?>
 

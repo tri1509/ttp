@@ -51,7 +51,7 @@
                         <tr>
                             <th>Giá</th>
                             <th>Thời Gian</th>
-                            <th><a href="index.php" title="Về Trang Chủ">Trở Về</a></th>
+                            <th><a href="index.html" title="Về Trang Chủ">Trở Về</a></th>
                         </tr>
                     </thead>
                     <tbody>

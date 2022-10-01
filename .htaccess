@@ -1,10 +1,22 @@
 RewriteEngine On
 
 RewriteRule "index.html" "index.php"
-# RewriteRule "sanpham.html" "sanpham.php"
+RewriteRule "gioithieu.html" "gioithieu.php"
+RewriteRule "sanpham.html" "sanpham.php"
+RewriteRule "giohang.html" "giohang.php"
+RewriteRule "login.html" "login.php"
+RewriteRule "dangky.html" "dangky.php"
+RewriteRule "offline.html" "offline.php"
+RewriteRule "order.html" "order.php"
+RewriteRule "restore.html" "restore.php"
+RewriteRule "restorepass.html" "restorepass.php"
+RewriteRule "success.html" "success.php"
+RewriteRule "donhang.html" "donhang.php"
 
-# RewriteRule "^([a-zA-Z0-9_-]+)/([0-9]+).html$" "?proid=$1"
-# RewriteRule "^([a-zA-Z0-9_-]+)/([0-9]+).html$" "?catid=$1"
 
 RewriteRule "^san-pham-theo-danh-muc/([0-9]+).html$" "productbycat.php?catid=$1"
+RewriteRule "^san-pham-theo-thuong-hieu/([0-9]+).html$" "productbybrand.php?brandid=$1"
+RewriteRule "^bai-viet/([0-9]+).html$" "baiviet.php?postid=$1"
+RewriteRule "^chi-tiet/([0-9]+).html$" "chitietsp.php?proid=$1"
+RewriteRule "^giohang/([0-9]+).html$" "giohang.html?cartid=$1"
 

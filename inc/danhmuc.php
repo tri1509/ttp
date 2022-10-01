@@ -22,7 +22,7 @@
          if($show_brand){
             while($result = $show_brand->fetch_assoc()){
       ?>
-         <a href="productbybrand.php?brandid=<?php echo $result['brand_id'] ?>"><img src="./img/diamond.png">
+         <a href="san-pham-theo-thuong-hieu/<?php echo $result['brand_id'] ?>.html"><img src="./img/diamond.png">
             <span>
                <?php echo $result['brand_name'] ?>
             </span>
@@ -53,7 +53,7 @@
                while($result = $get_post -> fetch_assoc()){
       ?>
          <div class="ct-aside">
-            <a href="baiviet.php?postid=<?php echo $result['baiviet_id'] ; ?>"><img src="./img/diamond.png"><span class="category-baiviet"><?php echo $result['baiviet_name'] ; ?></span></a>
+            <a href="bai-viet/<?php echo $result['baiviet_id'] ; ?>.html"><img src="./img/diamond.png"><span class="category-baiviet"><?php echo $result['baiviet_name'] ; ?></span></a>
          </div>
       <?php }} ?>
    </div>

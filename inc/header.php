@@ -48,10 +48,9 @@
 	<link rel="stylesheet" href="./css/lightslider.css" /> 
 	<link rel="stylesheet" href="./css/nivo-slider.css">   
 	<link rel="stylesheet" href="./css/style.css" />
-	<title>TTP</title>
+	<title><?php echo $title ;?></title>
 </head>
 <body>
-
 <header>
    <div class="container">
       <div class="flex-bw hide991" id="navbar">
@@ -62,19 +61,19 @@
                   <li><a href="index.html">Trang Chủ</a> </></li>
                   <li class="has-sub"><a href="gioithieu.html">Giới Thiệu</a></li>
                   <li class="has-sub">
-                     <a href="sanpham.php">Sản phẩm <i class="fas fa-sort-down"></i></a>
+                     <a href="sanpham.html">Sản phẩm <i class="fas fa-sort-down"></i></a>
                      <ul class="ul-sub-menu menu-sanpham">
                         <?php
                            $showCat = $cat -> show_category();
                            if($showCat) {
                               while($result = $showCat ->fetch_assoc()) {
                         ?>
-                           <li><a href="productbycat.php?catid=<?php echo $result['category_id'] ?>"><?php echo $result['category_name'] ?></a></li>
+                           <li><a href="san-pham-theo-danh-muc/<?php echo $result['category_id'] ?>.html"><?php echo $result['category_name'] ?></a></li>
                         <?php }} ?>
                      </ul>
                   </li>
                   <li class="has-sub">
-                     <a href="sanpham.php">Thương hiệu <i class="fas fa-sort-down"></i></a>
+                     <a href="sanpham.html">Thương hiệu <i class="fas fa-sort-down"></i></a>
                      <ul class="ul-sub-menu thuonghieu">
                      <?php
                         $show_brand = $brand->show_brand();
@@ -82,7 +81,7 @@
                            while($result = $show_brand->fetch_assoc()){
                      ?>
                         <li class="position-relative li-sub-menu">
-                           <a href="productbybrand.php?brandid=<?php echo $result['brand_id'] ?>"><?php echo $result['brand_name'] ?></a>
+                           <a href="san-pham-theo-thuong-hieu/<?php echo $result['brand_id'] ?>.html"><?php echo $result['brand_name'] ?></a>
                            <ul class="ul-sub-menu-lv2">
                         <?php
                            $id_lv2 = $result['brand_id'];
@@ -100,7 +99,7 @@
 
 
                   <li class="has-sub position-relative">
-                     <a href="giohang.php">
+                     <a href="giohang.html">
                         Giỏ hàng<i class="fa-solid fa-cart-shopping cart-icon"></i>
                      </a>
 
@@ -134,7 +133,7 @@
                   <li><a href="profile.php">Khách hàng</a></li>
                   <li><a href="?customerid=<?php echo Session::get('customer_id')?>" onclick="return confirm('Bạn có muốn đăng xuất không?')">Đăng Xuất</a></li>
                <?php }else{ ?>
-                  <li><a href="login.php">Đăng Nhập</a></li>
+                  <li><a href="login.html">Đăng Nhập</a></li>
                <?php } ?>
 
                   <form action="timkiem.php" method="POST">

@@ -1,4 +1,6 @@
-<?php include 'inc/header.php' ;?>
+<?php
+$title = "Sản Phẩm";
+include 'inc/header.php' ;?>
 <?php include 'inc/sale.php' ;?>
 
 <section>
@@ -26,7 +28,7 @@
 							while ($result = $showProduct ->fetch_assoc()) {
 					?>
 						<div class="col-xl-4 col-md-6 col-sm-6 col-xs-6 col-6">
-							<a href="chitietsp.php?proid=<?php echo $result['sanpham_id'] ?>" title="<?php echo $result['sanpham_name'] ?>">
+							<a href="chi-tiet/<?php echo $result['sanpham_id'] ?>.html" title="<?php echo $result['sanpham_name'] ?>">
 							<div class="item-pro">
 								<div class="home-product__item-img" style="background-image:url(./img/<?php echo $result['hinh']; ?>);"></div>
 								<div class="ct-item-pro">
@@ -37,7 +39,7 @@
 										<p class="new-pri bold"><?php echo number_format($result['sanpham_giakhuyenmai'])." đ" ; ?></p>
 									</div>
 									<div class="clear10"></div>
-									<a href="chitietsp.php?proid=<?php echo $result['sanpham_id'] ?>" class="addtocart">Xem Sản Phẩm </a>
+									<a href="chi-tiet/<?php echo $result['sanpham_id'] ?>.html" class="addtocart">Xem Sản Phẩm </a>
 								</div>
 							</div>
 							</a>
@@ -49,27 +51,6 @@
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="main-hotline-tuvan">
-	<div class="container">
-		<div class="flex-around">
-			<div class="hotline">
-				<img src="img/phone.png">
-				<div class="so-hotline">
-					<p class="shl-top">HOTLINE 24/24</p>
-					<p class="shl-bottom">0945 518 538</p>
-				</div>
-			</div>
-			<div class="tuvan">
-				<p class="tv-tit">YÊU CẦU TƯ VẤN VÀ GỌI LẠI</p>
-				<form class="form-tuvan">
-					<input type="text" placeholder="Nhập tên Quý khách" class="ip-tuvan" name="">
-					<input type="text" placeholder="Nhập số Điện thoại" class="ip-tuvan" name="">
-					<button type="submit" class="gui">GỬI</button>
-				</form>
-			</div>
-		</div>
-	</div>
 	</div>
 </section>
 <?php include 'inc/footer.php' ;?>

@@ -1,4 +1,6 @@
-<?php include 'inc/header.php' ;?>
+<?php
+$title = "Giỏ hàng";
+include 'inc/header.php' ;?>
 <?php include 'inc/sale.php' ;?>
 
 <?php
@@ -6,7 +8,7 @@
 		$cartId = $_POST['cartId'];
 		$quantity = $_POST['quantity'];
 		$update_quantity_cart = $ct -> update_quantity_cart($quantity,$cartId);
-		echo "<meta http-equiv='refresh' content='0;URL=?id=live'>";
+		echo "<meta http-equiv='refresh' content='0;URL=giohang.html?id=live'>";
 
 	}
 	if(isset($_GET['cartid']) && $_GET['cartid']!=NULL){
@@ -18,7 +20,7 @@
 
 <?php
 	if(!isset($_GET['id'])) {
-		echo "<meta http-equiv='refresh' content='0;URL=?id=live'>";
+		echo "<meta http-equiv='refresh' content='0;URL=giohang.html?id=live'>";
 	}
 ?>
 
@@ -87,7 +89,7 @@
 						</td>
 						<td data-label="Giá :"><p class="bold"><?php echo number_format($result['price'])."đ"  ?></p></td>
 						<td data-label="giá tổng :"><p class="bold"><?php echo number_format($total)."đ"; ?></p></td>
-						<td><a  href="?cartid=<?php echo $result['cartId'] ?>" onclick="return confirm('Bạn có muốn xoá sản phẩm này không?')" class="clred"><i class="fas fa-trash-alt"></i></a></td>
+						<td><a href="giohang.html?cartid=<?php echo $result['cartId'] ?>" onclick="return confirm('Bạn có muốn xoá sản phẩm này không?')" class="clred"><i class="fas fa-trash-alt"></i></a></td>
 					</tr>
 
 					<?php }} ?>
@@ -129,11 +131,11 @@
 			<div class="clear40"></div>
 			<div class="shopping">
 				<div class="shopleft">
-					<a href="sanpham.php"><button class="custom-btn btn-7"><span>Quay lại cửa hàng</span></button></a>
+					<a href="sanpham.html"><button class="custom-btn btn-7"><span>Quay lại cửa hàng</span></button></a>
 				</div>
 				<?php if($check_cart){ ?>
 					<div class="shopright">
-						<a href="login.php"><button type="button" class="check-out-btn">Thanh toán</button></a>
+						<a href="login.html"><button type="button" class="check-out-btn">Thanh toán</button></a>
 					</div>
 				<?php } ?>
 			</div>
@@ -143,8 +145,8 @@
 					<div class="row">
 						<div class="col-xl-12">
 							<h1 class="text-success">[Thành viên mới] Tôi có thể mua hàng Salanest mà không cần tài khoản Salanest không?</h1>
-							.<p><strong>* Không</strong> Hiện tại, <a href="gioithieu.php" title="giới thiệu về salanest">Salanest</a>  không hỗ trợ khách hàng đặt hàng và thanh toán cho đơn hàng <a href="gioithieu.php" title="giới thiệu về công ty salanest">Salanest</a>  mà không cần sử dụng tài khoản Salanest.</p>
-							<p><strong>* Bạn cần</strong> <a href="dangky.php" title="Đăng ký tài khoản mua hàng">đăng ký một tài khoản Salanest</a>  và sử dụng để mua sắm và thanh toán đơn hàng trên Salanest. Điều này sẽ giúp Salanest nhận được những thông tin chính xác liên quan đến đơn hàng của bạn, ví dụ như địa chỉ nhận hàng hoặc phương thức thanh toán,... </p>
+							.<p><strong>* Không</strong> Hiện tại, <a href="gioithieu.html" title="giới thiệu về salanest">Salanest</a>  không hỗ trợ khách hàng đặt hàng và thanh toán cho đơn hàng <a href="gioithieu.html" title="giới thiệu về công ty salanest">Salanest</a>  mà không cần sử dụng tài khoản Salanest.</p>
+							<p><strong>* Bạn cần</strong> <a href="dangky.html" title="Đăng ký tài khoản mua hàng">đăng ký một tài khoản Salanest</a>  và sử dụng để mua sắm và thanh toán đơn hàng trên Salanest. Điều này sẽ giúp Salanest nhận được những thông tin chính xác liên quan đến đơn hàng của bạn, ví dụ như địa chỉ nhận hàng hoặc phương thức thanh toán,... </p>
 							<div class="clear60"></div>
 							<hr>
 						</div>

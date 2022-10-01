@@ -1,11 +1,22 @@
 <?php
-	include 'inc/header.php';
-	include 'inc/sale.php';
-?>
-<?php
+	include_once 'lib/database.php';
+	include_once 'helpers/format.php';
+	spl_autoload_register(function($class){
+		include_once "classes/".$class.".php";
+	});
+	
 	if(isset($_GET['catid']) && $_GET['catid']!=NULL){
 		$id = $_GET['catid'];
 	}
+	$cat = new category();
+	$namebycat = $cat -> get_name_by_cat($id);
+	if($namebycat) {
+		while($get_title = $namebycat -> fetch_assoc()){
+		$title = $get_title['category_name'];
+	}}
+	
+	include 'inc/header.php';
+	include 'inc/sale.php';
 ?>
 <section>
  	<div class="main-breac">
@@ -48,7 +59,7 @@
 						if($show_brand){
 							while($result_showBrand = $show_brand->fetch_assoc()){
 					?>
-						<a href="productbybrand.php?brandid=<?php echo $result_showBrand['brand_id'] ?>"><img src="./img/diamond.png"><span><?php echo $result_showBrand['brand_name'] ?></span>
+						<a href="san-pham-theo-thuong-hieu/<?php echo $result_showBrand['brand_id'] ?>.html"><img src="./img/diamond.png"><span><?php echo $result_showBrand['brand_name'] ?></span>
 							<ul class="brand_lv2_list">
 							<?php
 								$id_lv2 = $result_showBrand['brand_id'];
@@ -76,7 +87,7 @@
 						while($result = $get_post -> fetch_assoc()){
 					?>
 						<div class="ct-aside">
-							<a href="baiviet.php?postid=<?php echo $result['baiviet_id'] ; ?>"><img src="./img/diamond.png"><span class="category-baiviet"><?php echo $result['baiviet_name'] ; ?></span></a>
+							<a href="bai-viet/<?php echo $result['baiviet_id'] ; ?>.html"><img src="./img/diamond.png"><span class="category-baiviet"><?php echo $result['baiviet_name'] ; ?></span></a>
 						</div>
 					<?php }} ?>
 					</div>
@@ -98,18 +109,18 @@
 							while($result = $productbycat -> fetch_assoc()) {
 					?>
 						<div class="col-xl-4 col-md-4 col-sm-6 col-xs-6 col-6">
-							<a href="chitietsp.php?proid=<?php echo $result['sanpham_id'] ?>" title="<?php echo $result['sanpham_name'] ?>">
+							<a href="chi-tiet/<?php echo $result['sanpham_id'] ?>.html" title="<?php echo $result['sanpham_name'] ?>">
 							<div class="item-pro">
 								<div class="home-product__item-img" style="background-image:url(./img/<?php echo $result['hinh']; ?>);"></div>
 								<div class="ct-item-pro">
-									<p class="bold"><a href="chitietsp.php?proid=<?php echo $result['sanpham_id'] ?>" class="clpink item-name"><?php echo $result['sanpham_name'] ?></a></p>
+									<p class="bold"><a href="chi-tiet/<?php echo $result['sanpham_id'] ?>.html" class="clpink item-name"><?php echo $result['sanpham_name'] ?></a></p>
 									<div class="clear10"></div>
 									<div class="flex-bw">
 										<p class="old-pri"><?php echo number_format($result['sanpham_gia'])." đ" ; ?></p>
 										<p class="new-pri bold"><?php echo number_format($result['sanpham_giakhuyenmai'])." đ" ; ?></p>
 									</div>
 									<div class="clear10"></div>
-									<a href="chitietsp.php?proid=<?php echo $result['sanpham_id'] ?>" class="addtocart">Xem Sản Phẩm</a>
+									<a href="chi-tiet/<?php echo $result['sanpham_id'] ?>.html" class="addtocart">Xem Sản Phẩm</a>
 								</div>
 							</div>
 							</a>

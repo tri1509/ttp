@@ -1055,9 +1055,14 @@ color: #d06767;
 	position: relative;
 	border-radius: 0px 0px 10px 10px;
 }
+
+.item-pro-pd {
+	/* padding: 10px; */
+	/* margin: 30px; */
+}
 .ct-item-pro{
 	padding: 10px;
-	background: #fafafa;
+	background: #ffff;
 	border-top: none;
 	text-align: center;
 	text-transform: lowercase;
