@@ -107,7 +107,7 @@
 					$result_name_lv2 = $namebybrandlv2 -> fetch_assoc();
 				?>
 				<h4 class="nomargin text-uppercase clredt">Thương hiệu
-					: <?php echo $result_name['brand_name'] ." loại ". $result_name_lv2['brand_name_lv2'] ?>
+					: <?php echo $result_name['brand_name'] ." - ". $result_name_lv2['brand_name_lv2'] ?>
 				</h4><br>
 				<div class="clear20"></div>
 				<div class="row flex-wrap list-spc">

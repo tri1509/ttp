@@ -20,16 +20,14 @@
                         <li><a href="productlist.php">Liệt kê sản phẩm</a> </li>
                     </ul>
                 </li>
-               <li><a class="menuitem">Site Option</a>
+                <li><a class="menuitem">Bải viết</a>
                     <ul class="submenu">
-                        <li><a href="titleslogan.php">Title & Slogan</a></li>
-                        <li><a href="social.php">Social Media</a></li>
-                        <li><a href="copyright.php">Copyright</a></li>
-                        
+                        <li><a href="postadd.php">Thêm bài viết</a></li>
+                        <li><a href="postlist.php">Danh sách bài viết</a></li>
                     </ul>
                 </li>
 				
-                 <li><a class="menuitem">Update Pages</a>
+                <li><a class="menuitem">Update Pages</a>
                     <ul class="submenu">
                         <li><a>About Us</a></li>
                         <li><a>Contact Us</a></li>

@@ -1,11 +1,13 @@
-<?php include 'inc/header.php' ;?>
-<?php include 'inc/sale.php' ;?>
-
+<?php 
+   $title = "Tìm kiếm";
+   include 'inc/header.php' ;
+   include 'inc/sale.php' ;
+?>
 
 <?php
 if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['search_button'])) {
    $tukhoa = $_POST['search_product'];
-   $title = $tukhoa;
+   $title_timkiem = $tukhoa;
 }
 ?> 
 <section>
@@ -27,7 +29,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['search_button'])) {
             include('inc/danhmuc.php');
          ?>
          <div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 col-xs-12 order-lg-2 order-md-1 order-1">
-         <h4 class="nomargin text-uppercase clredt">Kết quả tìm kiếm : <?php echo $title ?></h4>
+         <h4 class="nomargin text-uppercase clredt">Kết quả tìm kiếm : <?php echo $title_timkiem ?></h4>
             <div class="row">
                <?php
                $timkiem = $product -> timkiem($tukhoa);

@@ -100,60 +100,43 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
                      </div>
                      <div class="clear20"></div>
                   </div>
-               </div>
-   
-               <?php } }?>
-         
+               </div>         
+
                <div class="clear40"></div>
-               
+
                <div id="wraper">
                   <div class="tabs">
                      <ul class="nav-tabs">
-                        <li class="active"><a href="#menu_1">MÔ TẢ</a></li>
-                        <li><a href="#menu_2">HƯỚNG DẪN MUA HÀNG & THANH TOÁN</a></li>
+                        <li class="active"><a href="#menu_1">Hướng Dẫn Bảo Quản.</a></li>
+                        <li><a href="#menu_2">THÔNG TIN LIÊN HỆ & ĐẶT HÀNG.</a></li>
                      </ul>
                      <div class="tab-content">
                         <div id="menu_1" class="tab-content-item">
-                           <h2>MÔ TẢ</h2>
-                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                           quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                           consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                           cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                           proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br>
-                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                           quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                           consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                           cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                           proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br>
-                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                           quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                           consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                           cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                           proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br>
+                           <h2>Hướng Dẫn Bảo Quản.</h2>
+                           <p>- Bảo quản nơi thoáng mát, dùng trực tiếp sau khi mở nắp.</p>
+                           <p>- Lắc nhẹ trước khi dùng, ngon hơn khi uống lạnh</p>
+                           <p>- Phụ nữ có thai: Thai kỳ từ tháng thứ 4 và thai kỳ phải ổn định, ngày uống 1 hủ </p><p>-Người lớn tuổi: Ít bệnh nền, chỉ nên sử dụng yến sào 3 lần/ tuần, mỗi lần 1 hủ. Nếu sức khỏe yếu kém, cơ thể không còn khả năng hoạt động nhiều có thể sử dụng mỗi ngày với liều lượng 2 hủ trong tháng đầu tiên. Sang tháng thứ 2 thì dùng cách 2 ngày/ lần. Tháng thứ 3 trở đi thì dùng 10gr yến 3 ngày/ lần.</p>
+
+                        <p>- Nên ăn yến sào vào lúc sáng sớm, bụng đói và trước bữa ăn sáng khoảng 30 phút. Hoặc có thể dùng trước khi đi ngủ khoảng 1 tiếng.</p>
                         </div>
    
                         <div id="menu_2" class="tab-content-item">
-                           <h2>HƯỚNG DẪN MUA HÀNG & THANH TOÁN</h2>
-                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                           quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                           consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                           cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                           proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br>
-                           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                           tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                           quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                           consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                           cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                           proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><br>
+                           <h2>THÔNG TIN LIÊN HỆ</h2>
+                           <p>- Thông tin liên hệ & Đặt hàng trên Website <a href="https://salanest.com/" title="trang chủ Salanest.com"> https://salanestcom/.</a></p>
+                           <p>- Điện thoại: (+84)47 28 38 38.</p>
+                           <p>- Email: ttpsalanest@gmail.com.</p>
+                           <p class="des-nh">* Hiện nay Salanest đang hỗ trợ 04 hình thức thanh toán, bao gồm:</p>
+                           <p>* Chuyển khoản ngân hàng</p>
+                           <p>* Thanh toán Vnpay</p>
+                           <p>* Thẻ ATM nội địa (Internet Banking)</p>
+                           <p>* Thanh toán khi nhận hàng (COD)</p>
+                           <p>- Thương hiệu Công Ty SX TM XNK TIẾN THINH PHÁT được xây dựng trên phương châm , <u> Sản Phẩm Sạch, Chất lượng vàng” góp phần nâng cao sức khoẻ cho cộng đồng.</u></p>
                         </div>
                      </div>
                   </div>
    
                </div>
+               <?php } }?>
    
                <div class="clear20"></div>
                <p class="tag-p">

@@ -39,7 +39,7 @@
         }
 
         public function show_brand_lv2($id_lv2){
-            $query = "SELECT * FROM tbl_brand_lv2 WHERE brand_id = '$id_lv2' ORDER BY brand_id_lv2 DESC";
+            $query = "SELECT * FROM tbl_brand_lv2 WHERE brand_id = '$id_lv2' AND tinhtrang = '1' ORDER BY brand_id_lv2 DESC";
             $result = $this->db->select($query);
             return $result;
         }
@@ -115,7 +115,7 @@
             AND tbl_sanpham.brand_id = '$id'
             AND tbl_sanpham.brand_id_lv2 = '$idlv2' ";
             $result = $this->db->select($query);
-            return $result;
+            return $result ;
         }
         
     }
