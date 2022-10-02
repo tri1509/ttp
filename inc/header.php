@@ -155,8 +155,15 @@
             <div class="flex-bw">
             <span style="cursor:pointer;display: inline-block;color: #00502b; height:80px" class="sp-sn"><i class="fas fa-bars fa-2x" onclick="openNav()"></i></span>
             <span style="cursor:pointer;display: inline-block;color: #00502b; height:80px" class="sp-cn"><i class="fas fa-times fa-2x" onclick="closeNav()"></i></span>
-            <a href="giohang.php" class="cart">
+            <a href="giohang.html" class="cart">
                <i class="fa-solid fa-cart-shopping giohang-icon-tablet"></i>
+               <?php
+                  $check_cart = $ct -> check_cart();
+                  if($check_cart){
+                     $qty = session::get("qty");
+               ?>
+                  <span><?php echo $qty; ?></span>
+               <?php } ?>
             </a>
          </div>
       <a href="./" class="logo"><img src="img/ttp.png"></a>
@@ -173,9 +180,9 @@
 
             <ul class="menu-mobile" id="accordion">
                <li><a href="./">Trang chủ</a></li>
-               <li><a href="gioi-thieu.html">Giới thiệu</a></li>
+               <li><a href="gioithieu.html">Giới thiệu</a></li>
                <li class="hassub-mb panel">
-                     <p class="phelp"><a href="">Sản phẩm</a><a data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne" class="a-icon"><i class="fas fa-angle-down"></i></a></p>
+                     <p class="phelp"><a href="sanpham.html">Sản phẩm</a><a data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne" class="a-icon"><i class="fas fa-angle-down"></i></a></p>
                      <ul class="sub-menu-mb accordion-collapse panel-collapse collapse mobile-menu-list" id="flush-collapseOne" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
                      <?php
                         $showCat = $cat -> show_category();
@@ -183,33 +190,45 @@
                            while($result = $showCat ->fetch_assoc()) {
                      ?>
 
-                        <li><a href="productbycat.php?catid=<?php echo $result['category_id'] ?>"><?php echo $result['category_name'] ?></a></li>
+                        <li><a href="san-pham-theo-danh-muc/<?php echo $result['category_id'] ?>.html"><?php echo $result['category_name'] ?></a></li>
                         <?php }} ?>
                      </ul>
                </li>
                <li class="hassub-mb panel">
-                     <p class="phelp"><a href="?quanly=sanpham">Thương hiệu</a><a data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo" class="a-icon"><i class="fas fa-angle-down"></i></a></p>
+                     <p class="phelp"><a href="sanpham.html">Thương hiệu</a><a data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo" class="a-icon"><i class="fas fa-angle-down"></i></a></p>
                      <ul class="sub-menu-mb accordion-collapse panel-collapse collapse mobile-menu-list" id="flush-collapseTwo" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
                      <?php
                         $show_brand = $brand->show_brand();
                         if($show_brand){
                            while($result = $show_brand->fetch_assoc()){
                      ?>
-                        <li><a href="productbybrand.php?brandid=<?php echo $result['brand_id'] ?>"><?php echo $result['brand_name'] ?></a></li>
+                        <li><a href="san-pham-theo-thuong-hieu/<?php echo $result['brand_id'] ?>.html"><?php echo $result['brand_name'] ?></a></li>
                         <?php }} ?>
                      </ul>
                </li>
+               <?php
+                  if(isset($_GET['customerid'])){
+                     $delCart = $ct -> del_all_data_cart();
+                     session::destroy();
+                  }
+               ?>
                <?php 
-                     $login_check = Session::get('customer_login');
-                     if($login_check) {
-                     echo "<li><a href='profile.php'>Khách hàng</a></li>";
-                  ?>
+                  $customer_id = Session::get('customer_id');
+                  $check_order = $ct -> check_order($customer_id);
+                  if($check_order) {
+               ?>
+                  <li><a href='donhang.php'>Đơn hàng</a></li>
+               <?php } ?>
+
+               <?php 
+                  $login_check = Session::get('customer_login');
+                  if($login_check) {
+                  echo "<li><a href='profile.php'>Khách hàng</a></li>";
+               ?>
                   <li><a href="?customerid=<?php echo Session::get('customer_id')?>" onclick="return confirm('Bạn có muốn đăng xuất không?')">Đăng Xuất</a></li>
                <?php }else{ ?>
-                  <li><a href="login.php">Đăng Nhập</a></li>
+                  <li><a href="login.html">Đăng Nhập</a></li>
                <?php } ?>
-               <li><a href="">Tư vấn</a></li>
-               <li><a href="">Liên hệ</a></li>
             </ul>
          </div>
       </div>
