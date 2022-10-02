@@ -78,7 +78,7 @@
 					</div>
 				</div>
 				<div class="block-aside">
-					<div class="center"><img src="img/quangcao.jpg"></div>
+					<div class="center"><img src="img/qt.jpg"></div>
 				</div>
 				<div class="block-aside">
 						<h4 class="tit-aside"><i class="far fa-edit"></i> BÀI VIẾT MỚI NHẤT</h4>

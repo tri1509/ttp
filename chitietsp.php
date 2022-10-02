@@ -206,7 +206,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['submit'])) {
                               <p class="new-pri bold"><?php echo number_format($result_cungloai['sanpham_giakhuyenmai'])." đ" ; ?></p>
                            </div>
                            <div class="clear10"></div>
-                           <a href="chitietsp.php?proid=<?php echo $result_cungloai['sanpham_id'] ?>" class="addtocart">xem </a>
+                           <a href="chi-tiet/<?php echo $result_cungloai['sanpham_id'] ?>.html" class="addtocart">xem </a>
                         </div>
                      </div>
    

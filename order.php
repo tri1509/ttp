@@ -102,6 +102,7 @@
 									<td class="product-name"><?php echo $result['productName'] ?><strong class="product-quantity">x <?php echo $result['quantity'] ?></strong></td>
 									<td class="product-total"><?php echo number_format($total)." ₫"; ?></td>
 								</tr>
+							<?php }} ?>
 							</tbody>
 							<tfoot>
 								<tr class="order-total">
@@ -109,11 +110,11 @@
 									<td><strong class="total-price"><?php echo number_format($gtotal).' ₫'; ?></strong></td>
 								</tr>
 							</tfoot>
-							<?php }} ?>
 						</table>
 						<div class="place-order-wp clearfix">
 						<a href="order.html?orderid=order"><button class="custom-btn btn-7" type="button"><span>Đặt hàng</span></button></a>
 						</div>
+						<div class="clear40"></div>
 						</form>
 					</div>
 				</div>
@@ -192,6 +193,7 @@
 									<td class="product-name"><?php echo $result['productName'] ?><strong class="product-quantity">x <?php echo $result['quantity'] ?></strong></td>
 									<td class="product-total"><?php echo number_format($total)." ₫"; ?></td>
 								</tr>
+							<?php }} ?>
 							</tbody>
 							<tfoot>
 								<tr class="order-total">
@@ -199,7 +201,6 @@
 									<td><strong class="total-price"><?php echo number_format($gtotal).' ₫'; ?></strong></td>
 								</tr>
 							</tfoot>
-							<?php }} ?>
 						</table>
 						<div class="place-order-wp clearfix">
 							<input type="submit" id="order-now" value="Đặt hàng" name="submit">
