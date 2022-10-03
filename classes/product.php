@@ -33,15 +33,15 @@
                 return $alert;
             }else{
                 move_uploaded_file($file_temp,$uploaded_image);
-                $query = "INSERT INTO tbl_sanpham(category_id,brand_id,sanpham_name,sanpham_chitiet,sanpham_mota,sanpham_gia,sanpham_giakhuyenmai,sanpham_soluong,hinh) VALUES('$category','$brand','$productName','$product_desc','$price','$pricenew','$sanpham_soluong','$unique_image')";
-                $result = $this->db->insert($query);
-                if($result){
-                    $alert= "<span class='success'>Thêm thành công</span>";
-                    return $alert;
-                }else{
-                    $alert= "<span class='notok'>Thất bại</span>";
-                    return $alert;
-                }
+                // $query = "INSERT INTO tbl_sanpham(category_id,brand_id,sanpham_name,sanpham_chitiet,sanpham_mota,sanpham_gia,sanpham_giakhuyenmai,sanpham_soluong,hinh) VALUES('$category','$brand','$productName','$product_desc','$price','$pricenew','$sanpham_soluong','$unique_image')";
+                // $result = $this->db->insert($query);
+                // if($result){
+                //     $alert= "<span class='success'>Thêm thành công</span>";
+                //     return $alert;
+                // }else{
+                //     $alert= "<span class='notok'>Thất bại</span>";
+                //     return $alert;
+                // }
             }
             if(empty($productName)) {
                 $alert = "<span class='notok'>Thêm tên sản phẩm</span>";
@@ -165,8 +165,8 @@
         // end backend
 
         // start fontend
-        public function getproduct_feathered_8(){
-            $query = "SELECT * FROM tbl_sanpham ORDER BY rand() LIMIT 8";
+        public function getproduct_feathered_12(){
+            $query = "SELECT * FROM tbl_sanpham ORDER BY rand() LIMIT 12";
             $result = $this->db->select($query);
             return $result;
         }
