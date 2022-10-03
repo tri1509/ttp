@@ -33,10 +33,10 @@
 
 <head>
     <!-- SEO -->
-    <meta name="description" content="{{$meta_desc}}">
-    <meta name="keywords" content="{{$meta_keywords}}" />
-    <meta name="robots" content="INDEX,FOLLOW" />
-    <link rel="canonical" href="{{$url_canonical}}" />
+    <meta name="description" content="">
+    <meta name="keywords" content="" />
+    <meta name="robots" content="" />
+    <link rel="canonical" href="" />
     <meta name="author" content="">
     <!-- //SEO -->
     <base href="http://localhost/ttp/">

@@ -10,7 +10,7 @@
 ?>
 <ul class="pagination home-product__pagination">
     <li class="pagination-item">
-        <a href="sanpham.php?trang=<?php echo $trang - 1 ?>" class="pagination-item__link 
+        <a href="san-pham/trang<?php echo $trang - 1 ?>.html" class="pagination-item__link 
         <?php if($trang == 1){
             echo "disabled"; 
         }
@@ -25,14 +25,14 @@
     ?>
 
     <li class="pagination-item pagination-item__link-<?php if ($i == $trang) { echo "acctive"; } ?> ">
-        <a href="sanpham.php?trang=<?php echo $i ?>" class="pagination-item__link">
+        <a href="san-pham/trang<?php echo $i ?>.html" class="pagination-item__link">
             <?php echo $i ; ?>
         </a>
     </li>
 
     <?php  } ?>
     <li class="pagination-item">
-        <a href="sanpham.php?trang=<?php echo $trang + 1 ?>" class="pagination-item__link
+        <a href="san-pham/trang<?php echo $trang + 1 ?>.html" class="pagination-item__link
         <?php if($trang >= ceil($product_button)){
             echo "disabled"; 
         }

@@ -65,7 +65,7 @@ include 'inc/header.php';
             </div>
             <div class="clear20"></div>
             <div class="center shopleft">
-                <a href="sanpham.php" class="">
+                <a href="sanpham.html" class="">
                     <button class="custom-btn btn-7" type="button"><span>Xem tất cả</span></button>
                 </a>
             </div>

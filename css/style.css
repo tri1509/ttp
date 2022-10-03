@@ -1170,7 +1170,6 @@ header {
   margin: 20px 0px;
   transition: 0.2s;
   position: relative;
-  background-color: #f8f8f8;
   border-image: url(../img/border.png) 20% stretch !important;
   border: 4px solid transparent;
 }
