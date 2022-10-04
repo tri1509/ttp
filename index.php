@@ -105,12 +105,12 @@ include 'inc/header.php';
 
     <div class="clear40"></div>
 
-    <div class="main-sanphamchinh">
+    <div class="main-sanphamchinh parallax">
         <div class="container">
             <h3 class="tit-pub">BÀI VIẾT MỚI</h3>
             <p class="center">Thông tin cần biết - Tư vấn - Hướng dẫn sử dụng</p>
             <div class="clear40"></div>
-            <div class="parallax row">
+            <div class="row">
                 <div class="col-md-6">
                     <div class="block-news-home zoomshow">
                         <div class="flex-nh"><a href="gioithieu.html" class="img-nh"><img src="img/van-chuyen.webp"

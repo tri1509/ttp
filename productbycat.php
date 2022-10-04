@@ -36,7 +36,6 @@
                     <div class="block-aside">
                         <h4 class="tit-aside"><i class="fas fa-list-ul"></i> DANH MỤC</h4>
                         <div class="ct-aside">
-
                             <?php 
 						$showCat = $cat -> show_category();
 						if($showCat){
@@ -47,8 +46,7 @@
 							if($id == $result_showCat['category_id']){
 								echo "active";
 							}
-						?>
-						"><img src="./img/diamond.png"><span><?php echo $result_showCat['category_name'] ?></span></a>
+						?>"><img src="./img/diamond.png"><span><?php echo $result_showCat['category_name'] ?></span></a>
                             <?php }} ?>
 
                         </div>

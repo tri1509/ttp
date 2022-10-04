@@ -543,6 +543,13 @@ header {
   display: flex;
   justify-content: space-between;
 }
+
+.shopleft {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 #top-up {
   font-size: 50px;
   cursor: pointer;
@@ -3080,7 +3087,6 @@ footer p a {
 
 .active .showtotop {
   animation: showtop 1s ease-in-out 1 forwards;
-  opacity: 1;
 }
 
 @keyframes showtop {
@@ -3096,12 +3102,10 @@ footer p a {
 
 .active .zoomshow {
   animation: zoomshow 1s ease-in-out 1 forwards;
-  opacity: 1;
 }
 
 @keyframes zoomshow {
   from {
-    opacity: 0;
     transform: scale(0);
   }
   to {
@@ -3121,34 +3125,4 @@ footer p a {
 }
 .delay-08 {
   animation-delay: 0.8s !important;
-}
-.delay-1 {
-  animation-delay: 1s !important;
-}
-.delay-12 {
-  animation-delay: 1.2s !important;
-}
-.delay-14 {
-  animation-delay: 1.4s !important;
-}
-.delay-16 {
-  animation-delay: 1.6s !important;
-}
-.delay-18 {
-  animation-delay: 1.8s !important;
-}
-.delay-2 {
-  animation-delay: 2s !important;
-}
-.delay-12 {
-  animation-delay: 1.2s !important;
-}
-.delay-14 {
-  animation-delay: 1.4s !important;
-}
-.delay-16 {
-  animation-delay: 1.6s !important;
-}
-.delay-18 {
-  animation-delay: 1.8s !important;
 }
