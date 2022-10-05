@@ -13,7 +13,6 @@ RewriteRule "restorepass.html" "restorepass.php"
 RewriteRule "success.html" "success.php"
 RewriteRule "donhang.html" "donhang.php"
 
-
 RewriteRule "^san-pham-theo-danh-muc/([0-9]+).html$" "productbycat.php?catid=$1"
 RewriteRule "^san-pham-theo-thuong-hieu/([0-9]+).html$" "productbybrand.php?brandid=$1"
 RewriteRule "^bai-viet/([0-9]+).html$" "baiviet.php?postid=$1"

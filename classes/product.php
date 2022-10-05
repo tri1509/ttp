@@ -5,7 +5,6 @@
 ?>
 <?php
     class product {
-
         private $db;
         private $fm;
         public function __construct() {
@@ -221,7 +220,7 @@
 
         public function timkiem($tukhoa){
             $tukhoa = $this->fm->validation($tukhoa);
-            $query = "SELECT * FROM tbl_sanpham WHERE sanpham_name LIKE '%$tukhoa%' OR sanpham_chitiet LIKE '%$tukhoa%' OR sanpham_mota LIKE '%$tukhoa%'";
+            $query = "SELECT * FROM tbl_sanpham WHERE sanpham_name LIKE '%$tukhoa%' OR sanpham_chitiet LIKE '%$tukhoa%' ";
             $result = $this->db->select($query);
             return $result;
         }

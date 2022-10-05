@@ -48,7 +48,6 @@
 							}
 						?>"><img src="./img/diamond.png"><span><?php echo $result_showCat['category_name'] ?></span></a>
                             <?php }} ?>
-
                         </div>
                     </div>
                     <div class="block-aside">

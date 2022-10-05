@@ -10,14 +10,13 @@
 ?>
 <ul class="pagination home-product__pagination">
     <li class="pagination-item">
-        <a href="san-pham/trang<?php echo $trang - 1 ?>.html" class="pagination-item__link 
-        <?php if($trang == 1){
-            echo "disabled"; 
-        }
+        <?php
+            if($trang >=2){
         ?>
-        ">
+        <a href="san-pham/trang<?php echo $trang - 1 ?>.html" class="pagination-item__link">
             <i class="fa-solid fa-chevron-left page-left"></i>
         </a>
+        <?php } ?>
     </li>
 
     <?php
@@ -32,13 +31,12 @@
 
     <?php  } ?>
     <li class="pagination-item">
-        <a href="san-pham/trang<?php echo $trang + 1 ?>.html" class="pagination-item__link
-        <?php if($trang >= ceil($product_button)){
-            echo "disabled"; 
-        }
+        <?php
+        if ($trang < ceil($product_button)){
         ?>
-        ">
+        <a href="san-pham/trang<?php echo $trang + 1 ?>.html" class="pagination-item__link">
             <i class="fa-solid fa-chevron-right page-right"></i>
         </a>
+        <?php } ?>
     </li>
 </ul>

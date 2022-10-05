@@ -1783,10 +1783,6 @@ a.but-buy span {
   color: #fff;
 }
 
-.pagination-item__link.disabled {
-  display: none;
-}
-
 .pagination-item__link:hover {
   background-color: rgb(218, 218, 218);
   transform: scale(1.2);
